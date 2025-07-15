@@ -18,6 +18,11 @@ RUN pip install \
     pandas \
     requests
 
-    
+# Descargar el modelo "all-MiniLM-L6-v2" en la capa de build
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
+# Dar permisos al usuario jovyan para escribir en la caché
+RUN chown -R jovyan:users /home/jovyan/.cache
+
 USER jovyan
 WORKDIR /home/jovyan/work
