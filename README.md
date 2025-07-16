@@ -61,7 +61,7 @@ docker exec -it rag-ollama bash
 Dentro del contenedor, descarga un modelo compatible. Por ejemplo, para gemma:2b:
 
 ```bash
-ollama pull gemma:2b
+ollama pull gemma2:2b
 ```
 
 Este paso se hace solo una vez y puede tardar según tu conexión.
